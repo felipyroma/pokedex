@@ -1,0 +1,88 @@
+@import '.../../../../../config-scss/rem-calc.scss';
+
+$padding: rem-calc(20);
+
+:host {
+    .listing {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: $padding 0;
+    
+        height: rem-calc(400);
+    
+        padding: 0 rem-calc(10) 0 rem-calc(10);
+    
+        .pokemon {
+            position: relative;
+            display: flex;
+            width: calc(49% - 2.5rem);
+            height: rem-calc(157 - 40);
+    
+    
+            background-color: var(--white);
+    
+            margin-top: rem-calc(10);
+            padding: rem-calc(20);
+            border-radius: rem-calc(10);
+    
+            text-decoration: none;
+            color: var(--primary-color);
+    
+            &:hover {
+                scale: (1.03);
+                transition: 0.3s;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+    
+            &-status {
+                h2 {
+                    font-size: rem-calc(22);
+                    font-style: italic;
+                    font-weight: 700;
+    
+                    margin-bottom: rem-calc(10);
+                }
+    
+                ul {
+                    display: flex;
+                    flex-direction: column;
+    
+                    li {
+                        background-color: var(--gray);
+                        font-size: rem-calc(10);
+    
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        border-radius: rem-calc(50);
+    
+                        width: rem-calc(60);
+                        margin-bottom: rem-calc(5);
+                    }
+                }
+    
+            }
+    
+            &-img {
+                position: absolute;
+                right: $padding;
+                bottom: $padding;
+    
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                height: rem-calc(90);
+                width: rem-calc(110);
+    
+                background: url('../../../assets/background-list-pokemon.svg');
+    
+                img {
+                    width: rem-calc(60);
+                }
+            }
+        }
+    }
+}

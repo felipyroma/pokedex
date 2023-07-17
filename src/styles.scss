@@ -8,6 +8,17 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: rem-calc(10);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #262835;
+    border-radius: 20px;
+}
+
 main {
     width: rem-calc(600);
     margin: 0 auto;

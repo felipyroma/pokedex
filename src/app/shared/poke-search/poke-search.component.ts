@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'poke-search',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class PokeSearchComponent {
 
+  @Output() public emitSearch: EventEmitter<string> = new EventEmitter();
+
+  constructor(){
+
+  }
+
+  public search(value: string) {
+    this.emitSearch.emit(value)
+  }
 }
